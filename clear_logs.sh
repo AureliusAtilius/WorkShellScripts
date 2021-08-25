@@ -4,12 +4,13 @@
 #Copy a log folder to a test directory to test the script first
 #script will echo the folders only, uncomment rm to remove when ready 
 
-daysOld=$1
+daysEnd=$1
+daysStart=$2
 #baseFolder="/production/directory/path/"
 baseFolder="/test/directory/path/"
 
-command="find ${baseFolder} -maxdepth 4 -type d -name "log directory name" -mtime +${daysOld}"
-
+command="find ${baseFolder} -maxdepth 4 -type d -name "log directory name" -mtime +${daysEnd} -a -mtime -${DaysStart}"
+command="find ${baseFolder} -maxdepth 4 -type d -name "log directory name" -mtime +420 -a -mtime -571"
 
 echo $command
 rawFolders=( $($command) )
@@ -18,5 +19,5 @@ rawFolders=( $($command) )
 for i in "${rawFolders[@]}"
 do
         echo $i
-        #rm -Rfi $i
+        #rm -Rf $i
 done
