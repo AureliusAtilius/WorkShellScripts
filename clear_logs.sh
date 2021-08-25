@@ -12,7 +12,7 @@ command="find ${baseFolder} -maxdepth 4 -type d -name "log directory name" -mtim
 
 
 echo $command
-#rawFolders=( $($command) )
+rawFolders=( $($command) )
 
 
 for i in "${rawFolders[@]}"
