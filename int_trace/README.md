@@ -1,0 +1,2 @@
+This simple script is for tracing an unmarked network port to a switch in the MDF or IDF.
+Connect to the wall port and run the script to create a slow blink on the port lights of the respective switchport in the IDF.
